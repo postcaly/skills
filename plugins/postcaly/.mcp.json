@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "postcaly": {
+      "type": "http",
+      "url": "https://app.postcaly.com/mcp"
+    }
+  }
+}

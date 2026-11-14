@@ -1,0 +1,12 @@
+{
+  "name": "postcaly",
+  "owner": { "name": "Postcaly", "email": "info@postcaly.com" },
+  "metadata": { "description": "Postcaly plugins: plan, draft and schedule social media posts from your AI assistant." },
+  "plugins": [
+    {
+      "name": "postcaly",
+      "source": "./plugins/postcaly",
+      "description": "Connects Claude Code to your Postcaly workspace (app.postcaly.com) to see channels and posts and save drafts."
+    }
+  ]
+}
