@@ -24,8 +24,8 @@ https://app.postcaly.com/mcp
   sent as `Authorization: Bearer pc_live_...`. Never put the key in a URL, a file in a repository, or chat
   output.
 
-Access is in early preview for invited testers. If the server answers that agent access is not available,
-tell the person it is not open on their account yet.
+Agent access is included on every Postcaly plan for accounts with a confirmed email address. If the server
+answers that agent access is not available, ask the person to confirm their email address in Postcaly (Account).
 
 ## What you can do
 

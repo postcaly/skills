@@ -4,7 +4,7 @@ Connect your AI assistant to [Postcaly](https://postcaly.com), the social media 
 week, write posts in your voice, find your next free posting time, schedule posts and add pictures from a link,
 straight into your Postcaly workspace.
 
-> **Early preview.** Agent access is open to invited testers first. Ask for access at info@postcaly.com.
+> Agent access is included on every Postcaly plan, for any account with a confirmed email address. Guide: https://postcaly.com/ai
 > More: [postcaly.com/ai](https://postcaly.com/ai)
 
 ## The connector
@@ -26,6 +26,7 @@ Settings, AI agents.
 | **Claude, Claude Cowork** | Settings, Connectors, Add custom connector, paste the address above |
 | **ChatGPT** | Settings, Apps and Connectors, Developer mode, Create, paste the address above |
 | **Claude Code** | `claude mcp add --transport http postcaly https://app.postcaly.com/mcp`, or the plugin: `/plugin marketplace add postcaly/skills` then `/plugin install postcaly@postcaly` |
+| **Higgsfield + Postcaly** (Claude Code, Claude Cowork, Perplexity) | `/plugin install postcaly-higgsfield@postcaly`, or upload [`plugins/postcaly-higgsfield`](plugins/postcaly-higgsfield) as a plugin zip. Makes images and videos with Higgsfield (paid Higgsfield plan) and schedules them with Postcaly. Guide: https://postcaly.com/agents/higgsfield |
 | **Codex** | `codex mcp add postcaly --url https://app.postcaly.com/mcp` |
 | **Cursor** | [Add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=postcaly&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcHAucG9zdGNhbHkuY29tL21jcCJ9), or add `{"mcpServers":{"postcaly":{"url":"https://app.postcaly.com/mcp"}}}` to `.cursor/mcp.json` |
 | **Gemini CLI** | `gemini extensions install https://github.com/postcaly/skills` (or add `https://app.postcaly.com/mcp` as an MCP server) |

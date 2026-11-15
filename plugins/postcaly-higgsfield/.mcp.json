@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "postcaly": {
+      "type": "http",
+      "url": "https://app.postcaly.com/mcp"
+    },
+    "higgsfield": {
+      "type": "http",
+      "url": "https://mcp.higgsfield.ai/mcp"
+    }
+  }
+}
