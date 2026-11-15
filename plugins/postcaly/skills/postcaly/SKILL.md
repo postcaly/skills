@@ -20,7 +20,7 @@ https://app.postcaly.com/mcp
 - Assistants that support remote MCP with sign-in (Claude, ChatGPT, Cursor, Codex, Gemini CLI and
   others): add the address above as a custom connector. The person is asked to sign in to Postcaly,
   choose a workspace and allow access.
-- Assistants that use a key: the person creates an API key in Postcaly (Settings, AI agents) and it is
+- Assistants that use a key: the person creates an API key in Postcaly (Settings, AI agents, API keys) and it is
   sent as `Authorization: Bearer pc_live_...`. Never put the key in a URL, a file in a repository, or chat
   output.
 
@@ -29,27 +29,42 @@ tell the person it is not open on their account yet.
 
 ## What you can do
 
+What a connection may do is chosen by the person when they connect (or on the API key). Only use tools the
+server lists for this connection.
+
 | Tool | Use it to |
 |---|---|
 | `list_workspaces`, `get_workspace` | See the workspace, its time zone, usual posting times and today's allowance |
-| `list_channels` | See the connected social accounts and whether each needs reconnecting |
+| `list_channels`, `get_channel_options` | See connected accounts, and the choices a network needs for a post (e.g. a Pinterest board, TikTok privacy) |
 | `list_posts`, `get_post` | See scheduled, published, failed and draft posts |
-| `find_next_free_slot` | Find the next usual posting time with room under the plan |
-| `create_draft` | Save a new draft with text, channels and existing media |
-
-Drafts never publish by themselves. The person reviews and schedules them in Postcaly. Scheduling and
-publishing tools will be added later; only use the tools the server lists.
+| `find_next_free_slot`, `list_usual_times`, `get_plan_usage` | Find the next free usual time; check what the plan allows today |
+| `check_post` | Check a post against every network's rules without saving it |
+| `create_draft` | Save a draft (never schedules or publishes) |
+| `schedule_post`, `schedule_draft` | Schedule a new post or an existing draft for a time, or the next usual time |
+| `update_post`, `move_post`, `unschedule_post`, `delete_post` | Change, move, turn back into a draft, or delete a post that has not gone out |
+| `publish_now` | Publish straight away (only if the person allowed it) |
+| `list_media`, `upload_media_from_url`, `describe_media` | Use the media library, add a picture or video from a public https link, write alt text |
 
 ## How to work
 
 1. Start with `get_workspace` and `list_channels` so you know the time zone and which channels exist.
-2. Before writing, check `list_posts` for the days in question so you do not repeat what is planned.
-3. Write in the person's voice. Keep each network's limits in mind (X: 280 characters; Bluesky: 300).
-4. Save with `create_draft`, using channel ids from `list_channels`. Tell the person the draft is waiting
-   in their Postcaly calendar and what you chose.
-5. Times are in the workspace's time zone. Say the day and time in words.
-6. If a tool refuses (plan limit, reconnect needed, not allowed), explain it plainly and stop; do not retry
-   in a loop.
+2. Check `list_posts` for the days in question so you do not repeat what is planned.
+3. Write in the person's voice. Respect each network's limits (X 280 characters; Bluesky 300). Instagram,
+   TikTok and YouTube need a picture or video; use `get_channel_options` for required choices.
+4. Run `check_post` before scheduling. Fix what it reports.
+5. If the person did not ask for a time, use `nextUsualTime`. Say the day and time in words, in the workspace's
+   time zone.
+6. Only use `publish_now` when the person clearly asks to publish immediately and the connection allows it.
+   Never schedule a time less than 5 minutes ahead as a way round that.
+7. If the workspace is set to Drafts only, save drafts and tell the person they are waiting for their team.
+8. If a tool refuses (plan limit, reconnect needed, not allowed), explain it plainly and stop; do not retry in a
+   loop.
+
+## Command line (agents on your own computer)
+
+`npx -y github:postcaly/skills login` saves an API key; then `postcaly channels`, `postcaly posts`,
+`postcaly next-slot`, `postcaly draft --text "..." --channels <id>`, or `postcaly call <tool> --json '{...}'`
+for any tool above.
 
 ## Privacy
 

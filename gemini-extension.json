@@ -1,0 +1,11 @@
+{
+  "name": "postcaly",
+  "version": "0.2.0",
+  "description": "Plan, draft and schedule social media posts in Postcaly.",
+  "mcpServers": {
+    "postcaly": {
+      "httpUrl": "https://app.postcaly.com/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

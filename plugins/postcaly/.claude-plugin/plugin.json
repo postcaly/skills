@@ -1,6 +1,6 @@
 {
   "name": "postcaly",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Plan, draft and schedule social media posts in Postcaly from Claude Code.",
   "author": { "name": "Postcaly", "email": "info@postcaly.com", "url": "https://postcaly.com" },
   "homepage": "https://postcaly.com",

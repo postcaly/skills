@@ -1,0 +1,14 @@
+{
+  "name": "postcaly",
+  "version": "0.2.0",
+  "description": "Postcaly from the command line and from AI agents: plan, draft and schedule social media posts.",
+  "type": "module",
+  "bin": { "postcaly": "cli/postcaly.mjs" },
+  "files": ["cli/", "skills/", "plugins/", "gemini-extension.json", "GEMINI.md", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "homepage": "https://postcaly.com/ai",
+  "repository": { "type": "git", "url": "https://github.com/postcaly/skills.git" },
+  "license": "MIT",
+  "author": "Postcaly <info@postcaly.com>",
+  "keywords": ["postcaly", "social media", "scheduler", "mcp", "ai agent", "skills"]
+}

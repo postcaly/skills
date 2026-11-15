@@ -6,7 +6,7 @@
     {
       "name": "postcaly",
       "source": "./plugins/postcaly",
-      "description": "Connects Claude Code to your Postcaly workspace (app.postcaly.com) to see channels and posts and save drafts."
+      "description": "Connects Claude Code to your Postcaly workspace (app.postcaly.com): plan, draft, schedule and publish social media posts."
     }
   ]
 }
