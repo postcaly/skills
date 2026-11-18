@@ -29,7 +29,6 @@ Settings, AI agents.
 | **Codex** | `codex mcp add postcaly --url https://app.postcaly.com/mcp` |
 | **Cursor** | [Add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=postcaly&config=eyJ1cmwiOiAiaHR0cHM6Ly9hcHAucG9zdGNhbHkuY29tL21jcCJ9), or add `{"mcpServers":{"postcaly":{"url":"https://app.postcaly.com/mcp"}}}` to `.cursor/mcp.json` |
 | **Gemini CLI** | `gemini extensions install https://github.com/postcaly/skills` (or add `https://app.postcaly.com/mcp` as an MCP server) |
-| **Any agent with skills** (OpenClaw, Paperclip, NanoClaw…) | `npx skills add postcaly/skills` |
 | **Agents on your own computer** | the `postcaly` command line, below |
 
 ## Command line
