@@ -1,0 +1,18 @@
+{
+  "name": "postcaly",
+  "owner": {
+    "name": "Postcaly",
+    "email": "info@postcaly.com"
+  },
+  "metadata": {
+    "description": "Postcaly plugins: plan, draft and schedule social media posts from your AI assistant.",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "postcaly",
+      "source": "./plugins/postcaly",
+      "description": "Plan, draft and schedule social media posts in your Postcaly workspace from Cursor."
+    }
+  ]
+}

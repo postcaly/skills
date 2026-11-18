@@ -1,0 +1,16 @@
+{
+  "name": "postcaly",
+  "displayName": "Postcaly",
+  "version": "0.2.0",
+  "description": "Plan, draft and schedule social media posts in your Postcaly workspace (app.postcaly.com). Sign in once with OAuth; posts can be limited to drafts.",
+  "author": {
+    "name": "Postcaly",
+    "email": "info@postcaly.com",
+    "url": "https://postcaly.com"
+  },
+  "homepage": "https://postcaly.com/agents/cursor",
+  "repository": "https://github.com/postcaly/skills",
+  "license": "MIT",
+  "keywords": ["postcaly", "postcaly social", "postcaly scheduler"],
+  "logo": "assets/logo.svg"
+}
