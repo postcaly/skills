@@ -12,11 +12,6 @@
       "name": "postcaly",
       "source": "./plugins/postcaly",
       "description": "Connects Claude Code to your Postcaly workspace (app.postcaly.com): plan, draft, schedule and publish social media posts."
-    },
-    {
-      "name": "postcaly-higgsfield",
-      "source": "./plugins/postcaly-higgsfield",
-      "description": "Make images and videos with Higgsfield, then check and schedule them as social posts with Postcaly."
     }
   ]
 }
